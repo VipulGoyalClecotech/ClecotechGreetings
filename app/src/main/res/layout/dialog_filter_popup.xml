@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        app:cardCornerRadius="@dimen/margin_10"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+
+            android:id="@+id/ll_theme_colour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minWidth="320dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/sf_bold"
+                android:text="@string/select_filter_option"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:id="@+id/ll_enter_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+
+                <Switch
+                    android:id="@+id/switch_sent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/send"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text"
+                    android:theme="@style/SCBSwitch" />
+
+                <Switch
+                    android:id="@+id/switch_received"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/received"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text"
+                    android:theme="@style/SCBSwitch" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_line_separator_view_height"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/grey"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/selector_dialog_button"
+                    android:fontFamily="@font/sf_semibold"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:stateListAnimator="@null"
+                    android:text="@string/ok"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text" />
+
+                <View
+                    android:id="@+id/view_separator"
+                    android:layout_width="@dimen/common_line_separator_view_height"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@color/grey"
+                    android:visibility="invisible" />
+
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/selector_dialog_button"
+                    android:fontFamily="@font/sf_semibold"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:stateListAnimator="@null"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

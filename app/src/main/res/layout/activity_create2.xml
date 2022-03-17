@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.bhagavad.hifivedemo.create.CreateViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".homedetail.HomeDetailActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/tool_bar"
+                layout="@layout/common_toolbar" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:id="@+id/tv_select_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="@drawable/roundedbgwhitewithcurve"
+                android:drawableEnd="@drawable/ic_dropdown_arrrow"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/select_friends"
+                android:onClick="@{()->viewModel.selectFriendsClick()}"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_16"
+             />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_friends_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="@dimen/margin_medium"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/ll_buttom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"    >
+
+                <TextView
+                    android:id="@+id/tv_select_greeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:background="@drawable/roundedbgwhitewithcurve"
+                    android:drawableEnd="@drawable/ic_dropdown_arrrow"
+                    android:fontFamily="@font/sf_regular"
+                    android:gravity="center_vertical"
+                    android:hint="@string/select_greeting"
+                    android:onClick="@{()->viewModel.selectGreetingClick()}"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_16" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:background="@drawable/roundedbgwhitewithcurve"
+                    android:fontFamily="@font/sf_regular"
+                    android:gravity="top"
+                    android:hint="@string/write_something"
+                    android:minHeight="100dp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_16" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+
+                    android:background="@drawable/roundedbg">
+
+                    <TextView
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:fontFamily="@font/sf_semibold"
+                        android:gravity="center"
+                        android:onClick="@{()->viewModel.createClick()}"
+                        android:padding="18dp"
+                        android:soundEffectsEnabled="true"
+                        android:text="@string/create"
+
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/extra_large_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

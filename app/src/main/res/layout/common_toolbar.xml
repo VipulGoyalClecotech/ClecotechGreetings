@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="collapseToolBarModel"
+            type="com.bhagavad.hifivedemo.toolbar.ToolBarViewModel" />
+
+    </data>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/white"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:elevation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <RelativeLayout
+            android:background="@color/color_primary"
+            android:id="@+id/rl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_5">
+
+            <ImageButton
+                android:id="@+id/ib_left"
+                android:layout_width="@dimen/height_37"
+                android:layout_height="@dimen/height_37"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:onClick="@{()->collapseToolBarModel.backClick()}"
+                android:padding="@dimen/margin_5"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_arrow"
+                android:visibility="invisible" />
+
+
+            <ImageButton
+                android:id="@+id/ib_right_3"
+                android:layout_width="@dimen/height_37"
+                android:layout_height="@dimen/height_37"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ib_right_2"
+                android:paddingLeft="@dimen/margin_5"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingRight="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/ib_right_2"
+                android:layout_width="@dimen/height_37"
+                android:layout_height="@dimen/height_37"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ib_right_1"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/margin_5"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="gone" />
+
+
+            <ImageButton
+                android:id="@+id/ib_right_1"
+                android:layout_width="@dimen/height_25"
+                android:layout_height="@dimen/height_25"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_5"
+
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/margin_5"
+                android:scaleType="centerInside"
+                android:src="@drawable/filter_icon"
+               android:tint="@color/white"
+android:visibility="invisible"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toLeftOf="@+id/ib_right_1"
+                android:layout_toRightOf="@+id/ib_left"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_bold"
+                android:gravity="center"
+                android:maxLength="32"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+
+            <ImageView
+                android:id="@+id/iv_header_logo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_37"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/ib_right_1"
+                android:layout_toRightOf="@+id/ib_left"
+                android:scaleType="center"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</layout>
+

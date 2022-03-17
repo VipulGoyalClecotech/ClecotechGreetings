@@ -1,0 +1,125 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HiFiveDemo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary</item>
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/color_primary
+        </item>
+        <!--  For full screen view  -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--    Manage view behinde status bar and bottom navigation bar    -->
+        <item name="windowActionModeOverlay">true</item>
+        <!--      manage status bar  -->
+        <!--        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>-->
+        <!--   Do not show preview when activity switches like black color or else     -->
+        <item name="android:windowDisablePreview">true</item>
+
+        <!--    Image will cover from status bar    -->
+        <!--<item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>-->
+
+        <!--    Manage view behind from bottom navigation    -->
+        <item name="android:windowTranslucentNavigation" tools:ignore="NewApi">false</item>
+    </style>
+
+    <!--  Activity animation  -->
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right_anim</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right_anim</item>
+    </style>
+
+
+
+
+    <style name="MenuItemTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="GreenTextInputLayout" >
+        <item name="android:textColor">@color/hint_text_color</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="colorControlNormal">#D0D3DA</item>
+    </style>
+
+
+    <style name="MyTheme" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+
+    </style>
+
+
+    <!--textInput layout-->
+    <style name="textInputLayout" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/black</item>
+        <item name="colorControlNormal">@color/hint_text_color</item>
+        <item name="colorControlActivated">@color/selected_line_color</item>
+        <item name="android:colorControlHighlight" tools:ignore="NewApi">@color/hint_text_color</item>
+        <item name="fontFamily">@font/sf_regular</item>
+
+    </style>
+
+    <style name="InputLayout" >
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+    <style name="Theme.App.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="Dialog_WindowAnimation">
+
+        <item name="android:windowEnterAnimation">@anim/dialog_shrink_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_shrink_out</item>
+    </style>
+    <style name="full_screen_dialog">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+</resources>

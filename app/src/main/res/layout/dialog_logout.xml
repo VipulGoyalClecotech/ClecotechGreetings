@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        app:cardCornerRadius="@dimen/margin_10"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+
+            android:id="@+id/ll_theme_colour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minWidth="320dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="@string/logout"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/text_16" />
+            <TextView
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_semibold"
+                android:text="@string/are_you_sure_you_want_to_logout"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16" />
+
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_line_separator_view_height"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:id="@+id/ll_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:padding="@dimen/padding_10"
+                    android:gravity="center"
+                    android:id="@+id/btn_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/selector_dialog_button"
+                    android:fontFamily="@font/sf_semibold"
+                    android:stateListAnimator="@null"
+                    android:text="@string/ok"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text" />
+
+                <View
+
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:id="@+id/view_separator"
+                    android:layout_width="@dimen/common_line_separator_view_height"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:visibility="invisible" />
+
+
+                <Button
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:padding="@dimen/padding_10"
+                    android:gravity="center"
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/selector_dialog_button"
+                    android:fontFamily="@font/sf_semibold"
+                    android:stateListAnimator="@null"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

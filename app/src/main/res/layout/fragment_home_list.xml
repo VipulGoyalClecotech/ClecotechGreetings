@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.bhagavad.hifivedemo.dashboard.home.HomeListFragmentViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_large"
+        android:background="@color/white"
+        android:descendantFocusability="beforeDescendants"
+        android:fitsSystemWindows="false"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ib_filter"
+            android:layout_width="@dimen/height_25"
+            android:layout_height="@dimen/height_25"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_5"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:onClick="@{()->viewModel.onFilterClick()}"
+            android:padding="@dimen/margin_5"
+            android:scaleType="centerInside"
+            android:src="@drawable/filter_icon"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_notification_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ib_filter" />
+
+
+        <TextView
+
+            android:id="@+id/tv_no_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sf_bold"
+            android:gravity="center"
+            android:onClick="@{()->viewModel.onNoRecordClick()}"
+
+            android:text="@string/no_record_found"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="@dimen/dashboard_bottom_icon"
+            android:layout_height="@dimen/dashboard_bottom_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_large"
+
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:onClick="@{()->viewModel.onCreateClick()}"
+            android:scaleType="fitXY"
+            android:src="@drawable/create_toot" />
+
+    </RelativeLayout>
+
+</layout>

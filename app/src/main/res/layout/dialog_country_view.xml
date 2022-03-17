@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/rl_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            app:cardCornerRadius="@dimen/margin_15"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/title_box_height">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/title_box_inside_height"
+                            android:background="@color/blue">
+
+                            <TextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:fontFamily="@font/sf_medium"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_12"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_18" />
+
+                            <ImageView
+
+                                android:id="@+id/iv_cross"
+                                android:layout_width="@dimen/cross_icon_width"
+                                android:layout_height="@dimen/cross_icon_width"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/margin_7"
+                                android:layout_marginEnd="@dimen/margin_medium"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_close"
+                                android:tint="@color/white"
+                                card_view:ignore="RtlCompat,VectorDrawableCompat" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/rl_title"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="25dp"
+                        app:cardUseCompatPadding="true">
+
+                        <androidx.appcompat.widget.SearchView
+                            android:id="@+id/searchView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/search_box_height"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/white"
+                            android:fontFamily="@font/sf_regular"
+                            android:inputType="textCapSentences"
+                            app:searchIcon="@drawable/search"
+                            app:iconifiedByDefault="false"
+                            app:queryBackground="@color/white"
+                            app:queryHint="@string/search" />
+
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/options_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rl_parent"
+                    android:background="@color/white"
+                    android:minHeight="@dimen/height_45"
+                    android:scrollbars="vertical" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>
